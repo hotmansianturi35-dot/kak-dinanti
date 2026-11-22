@@ -1,0 +1,425 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #694858;
+    background: linear-gradient(
+        135deg,
+        #fff3f7,
+        #ffe3ed,
+        #fff8fb
+    );
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* =========================
+   BUNGA DEKORASI
+========================= */
+.decor {
+    position: fixed;
+    font-size: 40px;
+    opacity: 0.35;
+    z-index: 0;
+    animation: float 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.decor1 {
+    top: 5%;
+    left: 5%;
+}
+
+.decor2 {
+    top: 12%;
+    right: 7%;
+    animation-delay: 1s;
+}
+
+.decor3 {
+    bottom: 8%;
+    left: 8%;
+    animation-delay: 2s;
+}
+
+.decor4 {
+    bottom: 10%;
+    right: 5%;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    padding: 45px 20px 25px;
+}
+
+/* =========================
+   KARTU UTAMA
+========================= */
+.main-card {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid #ffffff;
+    border-radius: 28px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(190, 100, 140, 0.12);
+}
+
+.tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #bd7795;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 65px;
+    color: #c45d84;
+    font-weight: normal;
+}
+
+.subtitle {
+    max-width: 450px;
+    margin: 15px auto;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #927285;
+}
+
+.heart-decoration {
+    font-size: 35px;
+    color: #dc8eac;
+    margin: 12px 0 25px;
+}
+
+/* =========================
+   GALERI 2 FOTO
+========================= */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.photo-card {
+    width: calc(50% - 10px);
+    max-width: 310px;
+    padding: 10px;
+    background: #fff8fb;
+    border: 1px solid #f2d8e4;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(180, 100, 135, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.photo-card span {
+    display: block;
+    padding: 12px 5px 5px;
+    font-size: 13px;
+    color: #bd7795;
+}
+
+.photo-note {
+    color: #a38496;
+    font-size: 12px;
+    margin: 15px 0 25px;
+}
+
+/* =========================
+   BUTTON UTAMA
+========================= */
+button {
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.primary-button {
+    padding: 14px 35px;
+    border-radius: 50px;
+    background: linear-gradient(
+        135deg,
+        #d77c9d,
+        #bd527b
+    );
+    color: white;
+    font-size: 15px;
+    box-shadow: 0 6px 18px rgba(189, 82, 123, 0.2);
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(189, 82, 123, 0.25);
+}
+
+/* =========================
+   HALAMAN SURAT
+========================= */
+.letter-page {
+    margin-top: 25px;
+    animation: appear 0.5s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.letter-card {
+    background: #fffdfd;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(190, 100, 140, 0.12);
+    text-align: center;
+}
+
+.letter-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.letter-card h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    color: #c45d84;
+}
+
+.line {
+    width: 65px;
+    height: 2px;
+    background: #e7a5bf;
+    margin: 20px auto 25px;
+}
+
+/* =========================
+   ISI SURAT
+========================= */
+.letter-content {
+    text-align: left;
+    background: #fff7fa;
+    padding: 25px;
+    border-radius: 18px;
+    border-left: 3px solid #d77c9d;
+}
+
+.letter-content p {
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 18px;
+    color: #755568;
+}
+
+.letter-content p:last-child {
+    margin-bottom: 0;
+}
+
+.closing {
+    color: #b76889 !important;
+    font-style: italic;
+}
+
+/* =========================
+   PILIHAN
+========================= */
+.choice-area {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #f1dce5;
+}
+
+.choice-area h3 {
+    color: #c45d84;
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+.choice-description {
+    margin: 10px 0 20px;
+    font-size: 13px;
+    color: #98788b;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.yes-button,
+.no-button {
+    padding: 13px 22px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.yes-button {
+    background: #ce6e93;
+    color: white;
+    box-shadow: 0 5px 15px rgba(190, 90, 130, 0.15);
+}
+
+.yes-button:hover {
+    background: #bd527c;
+    transform: translateY(-2px);
+}
+
+.no-button {
+    background: #eee0e7;
+    color: #79586c;
+}
+
+.no-button:hover {
+    background: #e5d0dc;
+    transform: translateY(-2px);
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #b76c8d;
+    line-height: 1.7;
+}
+
+/* =========================
+   BUTTON KEMBALI
+========================= */
+.back-button {
+    margin-top: 25px;
+    padding: 11px 24px;
+    background: #f2e1e9;
+    color: #805b70;
+    border-radius: 50px;
+}
+
+.back-button:hover {
+    background: #e8d1de;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 12px;
+    color: #b68ca1;
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+@media (max-width: 600px) {
+
+    .container {
+        padding: 25px 12px;
+    }
+
+    .main-card {
+        padding: 30px 18px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .gallery {
+        gap: 12px;
+    }
+
+    .photo-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .photo-card img {
+        height: 300px;
+    }
+
+    .letter-card {
+        padding: 23px 16px;
+    }
+
+    .letter-card h2 {
+        font-size: 27px;
+    }
+
+    .letter-content {
+        padding: 18px;
+    }
+
+    .letter-content p {
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    .decor {
+        font-size: 30px;
+    }
+}
